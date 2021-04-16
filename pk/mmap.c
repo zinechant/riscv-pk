@@ -121,7 +121,7 @@ static uintptr_t __page_alloc()
 
   freelist_node_t node = __page_freelist_remove();
 
-  memset((void*)pa2kva(node.addr), 0, RISCV_PGSIZE);
+  // memset((void*)pa2kva(node.addr), 0, RISCV_PGSIZE);
 
   return node.addr;
 }
